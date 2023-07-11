@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h1>Programa que escribe usando variables y usando fucniones</h1>
+<script>
+	var anho = 2023;
+	var saltolinea = "<br><br>"
+	function saltarlinea(){
+		document.write("<br><br>")
+	}
+	
+	function imprimir(frase){
+		document.write(frase)
+	}
+	imprimir("<h3>Con document.write:</h3>")
+	saltarlinea();
+	document.write("Juan tiene: " + (anho-2000) + " años");
+	document.write(saltolinea);
+	document.write("Pedro tiene: " + (anho-1998) + " años");
+	saltarlinea();
+	document.write("Carlos tiene: " + (anho-1995) + " años");
+	document.write(saltolinea);
+	saltarlinea();
+	saltarlinea();
+	imprimir("<h3>Con funciones:</h3>")
+	saltarlinea();
+	imprimir("Hola amigos");
+	saltarlinea(),
+	imprimir("Carlos tiene: " + (anho-1995) + " años")
+	
+	
+</script>

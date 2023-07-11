@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>Programa que calcula el promedio de la edad de una familia</h1>
+<hr></hr>
+
+<script>
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+	function imprimir(frase){
+		document.write("<big>"+frase+"</big>");
+		saltarLinea();
+	}
+	
+	var numeroPar = 0;
+	var numero = 1;
+	while(numeroPar <=100){
+		numeroPar=2*numero;
+		imprimir(numeroPar);
+		numero++;
+	}
+	imprimir("Fin");
+	
+	
+</script>

@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<h1>Programa que calcula el índice de masa corporal</h1>
+
+
+<script>
+		function saltarLinea(){
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase){
+			document.write("<big>"+frase+"</big>");
+			saltarLinea();
+		}
+	
+	function calcularIMC(peso,altura){
+		imc = peso/(altura*altura);
+		imc = Math.round(imc)
+		return imc
+	}
+	
+	var nombre = prompt("Informe su nombre")
+	var pesoInformado = prompt("Informe su peso");
+	var alturaInformado = prompt("Informe su altura");
+	
+	imprimir("El IMC de "+nombre+" es de: " + calcularIMC(pesoInformado,alturaInformado));
+	
+	if (imc<18.5){
+		imprimir("Abajo de lo recomendado");
+	}
+	
+	if (imc >= 18.5 && imc< 25){
+		imprimir("Dentro de lo normal");
+	}
+	
+	if (imc>=25 && imc <30){
+		imprimir("Considerado con sobrepeso");
+	}
+	
+	if (imc>=30){
+		imprimir("Encima de lo recomendado:Obesidad");
+	}
+</script>

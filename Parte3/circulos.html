@@ -1,0 +1,44 @@
+<meta charset = "utf-8">
+Ingresa el radio de los círculos:<input/> <button>Aplicar</button>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    
+
+    function dibujarCirculo(x, y, radio, color) {
+
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2*3.14);
+        pincel.fill();
+    }
+	
+	var input = document.querySelector("input");
+	input.focus();
+	
+	function dibujarFlor(){
+		
+		pincel.clearRect(0,0,600,400);
+		pincel.fillStyle = "brown";
+		pincel.fillRect(0, 0, 600, 400);
+	
+		radio = parseInt(input.value);
+		
+		dibujarCirculo(300,200,radio,"red");//centro
+		dibujarCirculo(300,200+2*radio,radio,"blue");//abajo
+		dibujarCirculo(300,200-2*radio,radio,"yellow");//arriba
+		dibujarCirculo(300+2*radio,200,radio,"black");//derecha
+		dibujarCirculo(300-2*radio,200,radio,"orange");//izquierda
+		
+		input.focus();
+	}
+	
+
+	var button = document.querySelector("button");
+	button.onclick = dibujarFlor;
+	
+</script>

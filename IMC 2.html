@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1>Programa que calcula el índice de masa corporal</h1>
+
+
+<script>
+		function saltarLinea(){
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase){
+			document.write("<big>"+frase+"</big>");
+			saltarLinea();
+		}
+	
+	function calcularIMC(nombre,peso,altura){
+		imc = peso/(altura*altura);
+		imc = Math.round(imc)
+		//imprimir("El IMC de "+ nombre + " es: "+ imc);
+		return imc
+	}
+	
+	var imcFelipe = calcularIMC("Felipe",75,1.73);
+	var imcAgustin = calcularIMC("Agustín",75,1.64);
+	
+	imprimir("El IMC de Felipe es: "+ imcFelipe);
+	imprimir("El IMC de Agustín es: "+ imcAgustin);
+	imprimir("El promedio de los IMC de Agustin y Felipe es: " + (imcFelipe+imcAgustin)/2);
+</script>
